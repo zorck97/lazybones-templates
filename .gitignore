@@ -277,3 +277,4 @@ gradle-app.setting
 # End of https://www.gitignore.io/api/go,vim,git,svn,kate,sass,linux,gradle,windows,vagrant,netbeans,kdevelop4,sublimetext,jetbrains+all,visualstudiocode
 
 # Custom
+gradle.properties

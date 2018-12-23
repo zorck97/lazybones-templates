@@ -23,4 +23,4 @@ For installation instructions from binaries please visit the [Releases Page](htt
 ```console
 ```
 
-This project was proudly created with the go-project template for [lazybones](https://github.com/pledbrook/lazybones). Heavily influenced by [github.com/genuinetools/pepper](https://github.com/genuinetools/pepper)
+This project was created with the [go-project](https://github.com/zorck97/lazybones-templates) template for [lazybones](https://github.com/pledbrook/lazybones). Heavily influenced by [github.com/genuinetools/pepper](https://github.com/genuinetools/pepper)

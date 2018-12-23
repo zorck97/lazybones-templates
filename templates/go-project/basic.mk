@@ -103,7 +103,7 @@ cover: prebuild ## Runs go test with coverage.
 .PHONY: travis
 travis: prebuild ## Executes the necessary steps to configure travis
 	travis_file=".travis.yml";
-	echo "Updating $travis_file";
+	@echo "Updating $travis_file";
 
 	# Update the os and arch release file info with that from .goosarch.
 	files="";

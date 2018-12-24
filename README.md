@@ -1,5 +1,5 @@
-Lazybones template project
---------------------------
+## Lazybones template project
+[![Travis CI](https://img.shields.io/travis/zorck97/lazybones-templates.svg?style=flat-square&logo=appveyor)](https://travis-ci.org/${nickname}/${projectname})
 
 You have just created a simple project for managing your own Lazybones project
 templates. You get a build file (`build.gradle`) and a directory for putting

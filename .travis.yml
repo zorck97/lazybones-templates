@@ -1,9 +1,19 @@
 language: java
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-script: ./gradlew packageAllTemplates
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+env:
+  global:
+  - bintrayUsername="zorck97"
+script: "./gradlew packageAllTemplates"
+deploy:
+  provider: bintray
+  file: "build/packages/*.zip"
+  user: "zorck97"
+  key:
+    secure: V7UCzFDeTQV6w6q5ftlBtj8vxB5GazdhW3Ic5myEqaYIPlplleaEVjwMNIDPJGjhpeU4qGhFXsewU13mDZT9gChw5Oy0k6dBtCPx0upnNscP4ftiuqqGTiFKSEv4kVSUaQcvCdNbFIkmj9l0AWrJphXP9DtZHVvBXcfNye0fvgHylV4TiDEP1+Bjr02bD76ZOOhc9Lp0GUYfpDTLUcKn1aSYtTOT88gxzNcyixmQfswKMk9MFR5I3rZWast6DoYRw+9O5h8dvUDywUK/7Rt4qNXS7MYd4G1FreKDGcI1uc+VFobwKzseYe6eD1OCER60LmorF58J8JFle2+aFDUCY+roqr5It9F9g4gm7h3diq8MvvvTrVf9GGqeFez5uuMDrEEaHLdvicDisVxvS/cGh62V6PYxEdPpNhZlxbKYSlQN2V/exi7tn/mVPfVR9LZ5P4GaCznJGGwAMaggNawo3fE4zelSydT+J1ftIvsqQS3ARoCuN3Ow9g7GC6ctXwZXZvaDvP567K0mOt+DDyvMDhRaJ0qQdfKp2ZMNje64n4rfHxnWNWQxibjQvz76PKMdtR2InvDI2rAf6S7qV5lGFK70F1+XsWWGRmTjVkbc7rMO+7NQNprlW8xdSiFVftxH2/X6NLnXyzF6Gc5o9B02ko+dWE+K28MCTT3iQ+UUgIw=
+  skip_cleanup: true

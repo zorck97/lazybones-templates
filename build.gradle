@@ -23,8 +23,13 @@ lazybones {
     //
     // You could then set the following properties to `project.bintrayUsername`
     // and `project.bintrayApiKey` respectively.
-    repositoryUsername = project.bintrayUsername
-    repositoryApiKey = project.bintrayApiKey
+    if (System.env.bintrayUsername) {
+        repositoryUsername = System.env.bintrayUsername
+        repositoryApiKey = System.env.bintrayApiKey
+    } else {
+        repositoryUsername = project.bintrayUsername
+        repositoryApiKey = project.bintrayApiKey
+    }
 
     // These properties are required for Bintray open source hosting. Uncomment
     // and substitute in your project's license and vcsUrl:

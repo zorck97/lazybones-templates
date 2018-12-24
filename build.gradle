@@ -24,9 +24,11 @@ lazybones {
     // You could then set the following properties to `project.bintrayUsername`
     // and `project.bintrayApiKey` respectively.
     if (System.env.bintrayUsername) {
+        logger.info('Using environment variables for configuration')
         repositoryUsername = System.env.bintrayUsername
         repositoryApiKey = System.env.bintrayApiKey
     } else {
+        logger.info('Using gradle.properties file for configuration')
         repositoryUsername = project.bintrayUsername
         repositoryApiKey = project.bintrayApiKey
     }

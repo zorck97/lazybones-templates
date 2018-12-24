@@ -21,4 +21,4 @@ jobs:
 stages:
   - name: build
   - name: deploy
-    if: branch == master AND type != cron
+    if: branch == master AND type != cron AND commit_message !~ /(no-deploy)/

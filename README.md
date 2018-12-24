@@ -1,24 +1,38 @@
-## Lazybones template project
-[![Travis CI](https://img.shields.io/travis/zorck97/lazybones-templates.svg?style=flat-square&logo=appveyor)](https://travis-ci.org/${nickname}/${projectname})
+## Lazybones templates
+[![Travis CI](https://img.shields.io/travis/zorck97/lazybones-templates.svg?style=for-the-bad)](https://travis-ci.org/zorck97/lazybones-templates)
 
-You have just created a simple project for managing your own Lazybones project
-templates. You get a build file (`build.gradle`) and a directory for putting
-your templates in (`templates`).
+* [Installation](README.md#installation)
+* [Usage](README.md#usage)
 
-To get started, simply create new directories under the `templates` directory
-and put the source of the different project templates into them. You can then
-package and install the templates locally with the command:
+## Installation
 
-    ./gradlew installAllTemplates
+To install the templates to your own computer, clone this repo.
+
+```console
+$ git clone https://github.com/zorck97/lazybones-templates.git lazybones-templates && lazybones-templates
+```
+
+You can then package and install the templates with the command:
+
+```console
+$ ./gradlew installAllTemplates
+```
 
 You'll then be able to use Lazybones to create new projects from these templates.
-If you then want to distribute them, you will need to set up a Bintray account,
+
+If you then want to distribute them in your own repo, you will need to set up a Bintray account,
 populate the `repositoryUrl`, `repositoryUsername` and `repositoryApiKey` settings
 in `build.gradle`, add new Bintray packages in the repository via the Bintray
 UI, and finally publish the templates with
 
-    ./gradlew publishAllTemplates
+```console
+$ ./gradlew publishAllTemplates
+```
 
-You can find out more about creating templates on [the GitHub wiki][1].
+## Usage
 
-[1]: https://github.com/pledbrook/lazybones/wiki/Template-developers-guide
+To create a new project, with the go-project as the base structure, just run:
+
+```console
+$ lazybones create go-project 1.0 my-new-shiny-go-project
+```

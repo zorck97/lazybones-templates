@@ -10,4 +10,15 @@ env:
   global:
   - bintrayUsername="zorck97"
   - secure: WqruPdtH7o9v4Owe/iXYsOl6TbRY2dlk+22jOOZxlBBfOyLPZOlI/65etTPHdnDgZ2chBHmePHucxkA6VimVKPt82wng26E3nOyTxd8N6oO4UZILgSr+AqPV5MioVxe83tY4RHFeuUa/84dOGxNYqOdoMnClIK34a5HvV1smw5y+4BhenH2OVdypNeIK0Eo0Kg4Zz0/Ai90PptTr4O2FVv7GPwo1GKL647A6pwPzEeaPZzjtirVFXEdpn0mXBNB/rUD8bnb8qY6+Iv9uN4lmsNosBu3Ne1KpTP0uJ7QZ/Z+Ux6VG0miLvJhH+0OhKHYI/V3mYcNrOIAFhjqXpLfx0P+kQlbYxTalTuDZOsojod++7bN0zT+sTe/Wbxd5eBOdkl14pVJdhYQsSoG9qa2t2UeCWO8EHNq2qMgLozW2WX5187zgqQs/W2w8xu5co+ft7Ig8mW/N3rJODhW1fC0QbS2rtlH0apCLKkH+76+bVGP7a9MpZmr6jYp5EwChHsFfyq5PJYOBX66OlZwkRQ/IhiMa1MT/TpgLkWsLXGfceQorW+72VPFjgwBQ5uRdF69Iot8L49D5VYqM4Xbml/ztFre7T9K0Nm/LGlXAU/Y4fopGTVZDbs7MLh9Sxvprfkbk51X33QLVWQTqYyFc/Qo69mmXt8s6CF2uWALgdRbTK9c=
-script: "./gradlew publishAllTemplates --info"
+jobs:
+  include:
+    - stage: build
+      script: "./gradlew packageAllTemplates --info"
+      name: build
+    - stage: deploy
+      script: "./gradlew publishAllTemplates --info"
+      name: deploy
+stages:
+  - name: build
+  - name: deploy
+    if: branch == master AND type != cron

@@ -1,5 +1,5 @@
 ## Lazybones templates
-[![Travis CI](https://img.shields.io/travis/zorck97/lazybones-templates.svg?style=for-the-bad)](https://travis-ci.org/zorck97/lazybones-templates)
+[![Travis CI](https://img.shields.io/travis/zorck97/lazybones-templates.svg?style=for-the-badge)](https://travis-ci.org/zorck97/lazybones-templates)
 
 * [Installation](README.md#installation)
 * [Usage](README.md#usage)

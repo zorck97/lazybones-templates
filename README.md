@@ -1,5 +1,6 @@
 # Lazybones templates
 [![Travis CI](https://img.shields.io/travis/zorck97/lazybones-templates.svg?style=for-the-badge)](https://travis-ci.org/zorck97/lazybones-templates)
+[![Snyk.io](https://img.shields.io/snyk/vulnerabilities/github/zorck97/lazybones-templates/build.gradle.svg?style=for-the-badge)](https://snyk.io/test/github/zorck97/lazybones-templates?targetFile=build.gradle)
 
 * [Installation](README.md#installation)
 * [Usage](README.md#usage)

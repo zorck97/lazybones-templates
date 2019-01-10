@@ -2,6 +2,7 @@
 [![Travis CI](https://img.shields.io/travis/${nickname}/${projectname}.svg?style=for-the-badge)](https://travis-ci.org/${nickname}/${projectname})
 [![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=for-the-badge)](https://godoc.org/github.com/${nickname}/${projectname})
 [![Github All Releases](https://img.shields.io/github/downloads/${nickname}/${projectname}/total.svg?style=for-the-badge)](https://github.com/${nickname}/${projectname}/releases)
+[![Dependency Check](https://img.shields.io/snyk/vulnerabilities/github/${nickname}/${projectname}.svg?style=for-the-badge)](https://snyk.io/test/github/${nickname}/${projectname})
 
 * [Installation](README.md#installation)
 	* [Binaries](README.md#binaries)
